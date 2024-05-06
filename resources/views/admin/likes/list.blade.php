@@ -56,41 +56,7 @@
     </div>
   </div>
 
-  <div class="modal fade" id="deleteModal" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header bg-danger">
-          <h5 class="modal-title text-white">Delete Comment</h5>
-          <button type="button" class="close rounded-pill" data-bs-dismiss="modal" aria-label="Close">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-x">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Are you sure want to delete this comment?</p>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <form action="{{ url('admin/komentar/') }}" method="post" id="data-delete-form">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger">Delete</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </section>
 @endsection
 
