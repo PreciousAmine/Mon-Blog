@@ -163,6 +163,7 @@ return [
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
 				Qirolab\Laravel\Reactions\ReactionsServiceProvider::class,
+				Laravel\Socialite\SocialiteServiceProvider::class,
 
 
 
