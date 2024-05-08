@@ -4,7 +4,10 @@
 
 	<form method="POST" action="{{ route('login') }}">
 		@csrf
-
+		<div class="container position-relative d-flex flex-column align-items-center">
+		<i class="bi bi-google"></i>
+		<a href="{{url('login/google')}}" class="btn btn-neutral btn-icon"> </a>
+	</div>
 		<!-- Email Address -->
 		<div>
 			<x-input-label for="email" :value="__('Email')" />
@@ -33,20 +36,24 @@
 		</div>
 
 		<div class="flex items-center justify-end mt-4">
+
 			<a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('register') }}">
 					{{ __("Create an account?") }}
 				</a>
-				<div class="flex items-center justify-end mt-4">
-			{{-- @if (Route::has('password.request'))
+
+			@if (Route::has('password.request'))
+			<li>
 				<a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
 					{{ __('Forgot your password?') }}
 				</a>
-			@endif --}}
+			</li>
+
+			@endif
 
 			<x-primary-button class="ms-3">
 				{{ __('Log in') }}
 			</x-primary-button>
-		</div>
+
 		</div>
 	</form>
 

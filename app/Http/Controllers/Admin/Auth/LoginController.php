@@ -10,10 +10,12 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
+use Laravel\Socialite\Facades\Socialite;
 use Stevebauman\Location\Facades\Location;
 
 class LoginController extends Controller
 {
+	use Socialite;
 	public function index()
 	{
 		return view('auth.login');
@@ -69,6 +71,16 @@ class LoginController extends Controller
 		return to_route('dashboard');
 	}
 
+	public function redirectToProvider()
+	{
+		return Socialite::driver('google')->stateless()->redirect();
+	}
+	public function handleProviderCallback()
+	{
+		$user = Socialite::driver('google')->user();
+		// $user->token; (return as your need)
+	}
+
 	public function logout(Request $request)
 	{
 		$userEmail = Auth::user()->email;
@@ -101,7 +113,7 @@ class LoginController extends Controller
 
 			$locationData = Location::get($publicIp);
 		} catch (\Exception $e) {
-			
+
 			return 'Unable to retrieve IP.';
 		}
 

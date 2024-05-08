@@ -70,6 +70,9 @@ Route::middleware(['auth', 'verified', 'role:admin,writter'])->prefix('admin')->
 	Route::post("/logout", [LoginController::class, 'logout'])->name('logout');
 });
 
+/*Login with Google account*/
+Route::get('login/google', 'Auth\LoginController@redirectToProvider');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
 
 
 Route::middleware(['auth', 'verified', 'role:admin'])->prefix('admin')->group(function () {
