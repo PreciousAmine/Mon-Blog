@@ -22,12 +22,6 @@
 		@include('includes.scripts')
 
 		@yield('page_scripts')
-		<script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
-    <script>
-        var botmanWidget = {
-            aboutText: 'Botman',
-            introMessage: "Heyy! What assistance can we provide for you?"
-        };
-    </script>
+
 	</body>
 </html>

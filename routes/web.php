@@ -30,7 +30,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/index',[HomeController::class, 'index'])->name('about');
 
 
-Route::match(['get', 'post'], '/botman-chat', 'BotController@invoke');
+/* ChatBot */
 
 
 Route::get("share-posts", [HomeController::class, "sharePosts"]);

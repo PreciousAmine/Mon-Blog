@@ -4,7 +4,5 @@
 		&copy; {{ date('Y') }} Poetic Whispers - All Rights Reserved. By Goody Precious
 		<a href="https://www.wattpad.com/story/281065374-my-heart"> with Love. </a>
 	</p>
-
-
     </footer>
     </section>
