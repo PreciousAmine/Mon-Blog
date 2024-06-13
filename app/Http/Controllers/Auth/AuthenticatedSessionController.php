@@ -97,11 +97,11 @@ class AuthenticatedSessionController extends Controller
 			'email' => $email,
 			'activity' => $activity,
 			'status' => $status,
-			'ip_address' => $locationData->ip,
+			'ip_address' => $locationData ? $locationData->ip : '',
 			'user_agent' => $userAgent,
-			'city' => $locationData->cityName . ', ' . $locationData->regionName ?? null,
-			'latitude' => $locationData->latitude ?? null,
-			'longitude' => $locationData->longitude ?? null,
+			'city' => $locationData ? $locationData->cityName . ', ' . $locationData->regionName : null,
+			'latitude' => $locationData ? $locationData->latitude : null,
+			'longitude' => $locationData ? $locationData->longitude : null,
 			'created_at' => now(),
 		]);
 	}

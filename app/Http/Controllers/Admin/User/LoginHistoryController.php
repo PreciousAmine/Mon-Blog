@@ -35,7 +35,7 @@ class LoginHistoryController extends Controller
 				->rawColumns(['status', 'action'])
 				->make(true);
 		}
-
+		 
 		return view('admin.users.login-history', compact('totalData', 'loginSuccess', 'loginFailed'));
 	}
 

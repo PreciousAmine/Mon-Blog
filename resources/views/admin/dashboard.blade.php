@@ -56,7 +56,7 @@
 						<div
 							class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start"
 						>
-							<div class="stats-icon blue mb-2">
+							<div class="stats-icon red mb-2">
 								<i class="iconly-boldHeart"></i>
 							</div>
 						</div>

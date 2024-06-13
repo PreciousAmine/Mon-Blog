@@ -110,6 +110,7 @@
 <a href="{{ route('unlike.post', $post->id) }}"
    class="{{ $post->liked() ? 'active' : 'hidden' }} bi bi-hand-thumbs-down"
    onclick="event.preventDefault(); document.getElementById('unlike-form-{{ $post->id }}').submit();">
+	 {{ $post->unlikeCount }}
 </a>
 
 <form id="unlike-form-{{ $post->id }}" action="{{ route('unlike.post', $post->id) }}" method="post" style="display: none;">
