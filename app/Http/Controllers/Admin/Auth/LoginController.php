@@ -129,4 +129,10 @@ class LoginController extends Controller
 			'created_at' => now(),
 		]);
 	}
+	/**
+	 * Get the default driver name.
+	 * @return string
+	 */
+	public static function getDefaultDriver() {
+	}
 }
